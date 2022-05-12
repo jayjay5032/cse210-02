@@ -54,7 +54,7 @@ class Director:
 
         random_card_1 = random_card_2
 
-        return self.user_point, random_card_1
+        return self.user_point
 
     def ask_continue_game(self):
         print(f"Your point is: {self.user_point}")
@@ -65,7 +65,7 @@ class Director:
                 self.is_playing = False
         else:
             self.is_playing = False
-            print("Thank for palying!")
+            print("Thank for playing!")
         return self.is_playing
 
 director = Director()
