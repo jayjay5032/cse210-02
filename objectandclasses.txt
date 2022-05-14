@@ -1,4 +1,4 @@
-Object: Hilo game
+Overview of Hilo game
 
 Responsibility:
 To hold, process, and display information.
