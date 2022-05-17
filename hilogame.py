@@ -15,6 +15,7 @@ class Director:
             self.draw_card()
             self.high_or_low()
             self.card_compare()
+            self.game_response()
             self.ask_continue_game()
 
     def draw_card(self):
@@ -36,16 +37,20 @@ class Director:
             if self.user_input == "h":
                 if random_card_2 > random_card_1:
                     self.user_point += 100
+                    self.state = True
 
                 elif random_card_2 < random_card_1:
                     self.user_point -= 75
+                    self.state = False
 
             elif self.user_input == "l":
                 if random_card_2 > random_card_1:
                     self.user_point -= 75
+                    self.state = False
 
                 elif random_card_2 < random_card_1:
                     self.user_point += 100
+                    self.state = True
 
         elif random_card_2 == random_card_1:
             self.draw_card()
@@ -54,7 +59,17 @@ class Director:
 
         random_card_1 = random_card_2
 
-        return self.user_point
+        return self.user_point, self.state
+
+    def game_response(self):
+        
+        if self.state == True:
+
+            print("Congratulations on winning! You have gone up by 100 points!")
+
+        elif self.state == False:
+
+            print("It seems you have lost. Your points have been reduced by 75 points!")
 
     def ask_continue_game(self):
         print(f"Your point is: {self.user_point}")
