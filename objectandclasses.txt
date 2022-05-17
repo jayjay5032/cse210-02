@@ -1,0 +1,41 @@
+Overview of Hilo game
+
+Responsibility:
+To hold, process, and display information.
+
+Behaviors:
+- Display card numbers
+- Ask the player whether to continue the game
+- Process the user input and decide whether s/he won
+
+State:
+- Card number
+- Game continue
+- User input
+- Points
+
+
+
+=============================================================================================
+Class: director
+
+- card1: integer
+- is_playing: Boolean
+- user_point: integer
+- user_input: string
+- random_card_1: integer
+- random_card_2: integer
+
+- start_game(): None
+- draw_card(): card1.value
+- high_or_low(): user_input
+- card_compare(): user_point
+- ask_continue_game(): is_playing
+
+=============================================================================================
+Class: card
+
+- value: integer
+
+- roll(): none
+- get_value(): value
