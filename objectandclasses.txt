@@ -39,3 +39,24 @@ Class: card
 
 - roll(): none
 - get_value(): value
+
+
+=====================================================================================================
+
+
+To come up with game design, our team started by figuring out the object called Hilo Game. A player starts with a base point of 300 and a random card number.
+The player has to guess if the next random card number the program generated from 1 to 13 would be higher or lower than the last round.
+If s/he guessed it right, the player gains 100 points and if wrong, loses 75 points.
+The program asks the player whether to continue with the game at the end of every round and when the point reaches 0, the game ends.
+In a nutshell, the games had to hold, process, and display information for the player, which was the programs responsibility.
+The respobsibility gave us an idea of what behaviors the game was going to have; display card numbers,
+ask players to continue or end the game, and process the number the player guessed and decide whether s/he won.
+From the behaviors, states of the game becomes clear which are card number, game continue, user input, and points.
+Since one of the main focus of the game is the random card number, we made a separate class called 'card'.
+'Card' works for the class 'director' by generating a random integer from 1 to 13 for the round. It eventually returns the random number.
+The class 'director' is the biggest frame of the Hilo Game. It first initiates card, playing state, user point (300), and user input(blank).
+When the game starts by calling start_game function, the program will draw_card through the class 'card' and present it to the player.
+The high_or_low function prints the number and get the input from the user.
+The card_compare function will compare the card values and decides if the user made a correct guess and tallies the user points.
+At last, ask_continue_game function prints user point and asks user if s/he wants to continue with the game.
+
