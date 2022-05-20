@@ -1,4 +1,4 @@
-Object: Hilo game
+Overview of Hilo game
 
 Responsibility:
 To hold, process, and display information.
@@ -39,6 +39,7 @@ Class: card
 
 - roll(): none
 - get_value(): value
+<<<<<<< HEAD
 
 
 =====================================================================================================
@@ -60,3 +61,5 @@ The high_or_low function prints the number and get the input from the user.
 The card_compare function will compare the card values and decides if the user made a correct guess and tallies the user points.
 At last, ask_continue_game function prints user point and asks user if s/he wants to continue with the game.
 
+=======
+>>>>>>> 138775d7cd7c2d134cef13f84c8ec30c1058e9c0
